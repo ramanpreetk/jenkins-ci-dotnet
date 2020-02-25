@@ -2,8 +2,8 @@ pipeline {
 agent any
 
 environment {
-   PATH = "C:\\WINDOWS\\SYSTEM32"
-   dotnet = "C:/Program Files/dotnet/dotnet.exe"
+   // PATH = "C:\\WINDOWS\\SYSTEM32"
+   // dotnet = "C:/Program Files/dotnet/dotnet.exe"
 }
 
 stages {
@@ -16,7 +16,7 @@ stage ('Checkout') {
 }
 stage ('Restore Packages') {     
          steps {
-             bat "${env.dotnet} restore --configfile NuGet.Config"
+             bat "dotnet restore --configfile NuGet.Config"
           }
         }
 stage('Clean') {
