@@ -15,7 +15,7 @@ stage ('Checkout') {
 }
 stage ('Restore Packages') {     
          steps {
-             bat "% C:/Program Files/dotnet/dotnet.exe% restore --configfile NuGet.Config"
+             bat "C:/%Program Files/dotnet/dotnet.exe% restore --configfile NuGet.Config"
           }
         }
 stage('Clean') {
