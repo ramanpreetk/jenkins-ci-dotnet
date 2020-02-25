@@ -2,7 +2,7 @@ pipeline {
 agent any
 
 environment {
-   // PATH = "C:\\WINDOWS\\SYSTEM32"
+   PATH = "C:\\WINDOWS\\SYSTEM32"
    // dotnet = "C:/Program Files/dotnet/dotnet.exe"
 }
 
