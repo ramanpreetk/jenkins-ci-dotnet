@@ -20,12 +20,12 @@ stage ('Restore Packages') {
         }
 stage('Clean') {
       steps {
-            bat 'dotnet clean'
+            bat '"C:\\Program Files\\dotnet\\dotnet.exe" clean'
        }
     }
 stage('Build') {
      steps {
-            bat 'dotnet build --configuration Release'
+            bat '"C:\\Program Files\\dotnet\\dotnet.exe" build --configuration Release'
       }
    }
  }
