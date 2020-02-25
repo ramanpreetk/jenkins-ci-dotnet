@@ -6,7 +6,9 @@ dotnet = 'C:\\Program Files\\dotnet'
 stages {
 stage ('Checkout') {
             steps {
-                 withCredentials([usernamePassword(credentialsId: 'cicdpipeline', passwordVariable: 'pass', usernameVariable: 'user')])
+                 withCredentials([usernamePassword(credentialsId: 'cicdpipeline', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    checkout scm
+                 }
             }
 }
 stage ('Restore Packages') {     
