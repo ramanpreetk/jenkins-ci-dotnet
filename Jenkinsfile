@@ -2,7 +2,7 @@ pipeline {
 agent any
 
 environment {
-dotnet = "C:\\Program%20Files\\dotnet\\dotnet.exe"
+dotnet = "C://Program%20Files//dotnet//dotnet.exe"
 }
 
 stages {
