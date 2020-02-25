@@ -2,7 +2,8 @@ pipeline {
 agent any
 
 environment {
-dotnet = "C:/Program%20Files/dotnet/dotnet.exe"
+    PATH = "C:\\WINDOWS\\SYSTEM32"
+// dotnet = "C:/Program%20Files/dotnet/dotnet.exe"
 }
 
 stages {
