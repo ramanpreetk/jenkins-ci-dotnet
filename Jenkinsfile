@@ -1,8 +1,6 @@
 pipeline {
 agent any
 
-def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
-
 environment {
    PATH = "C:\\Windows\\System32"
 }
@@ -27,7 +25,10 @@ stage ('Restore Packages') {
 //     }
 stage('Build') {
      steps {
-            bat "${msbuild} src\\MyWindowsService\\MyWindowsService.sln"
+        script{
+           def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
+           bat "${msbuild} src\\MyWindowsService\\MyWindowsService.sln"
+        }
       }
    }
  }
