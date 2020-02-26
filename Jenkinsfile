@@ -3,7 +3,6 @@ agent any
 
 environment {
    PATH = "C:\\Windows\\System32"
-   def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
 }
 
 stages {
@@ -26,7 +25,7 @@ stage ('Restore Packages') {
 //     }
 stage('Build') {
      steps {
-            bat "${msbuild} src\\MyWindowsService\\MyWindowsService.sln"
+            bat "msbuild src\\MyWindowsService\\MyWindowsService.sln"
       }
    }
  }
