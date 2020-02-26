@@ -26,7 +26,7 @@ stage ('Restore Packages') {
 stage('Build') {
      steps {
         script{
-           bat "${tool 'msbuild'} src\\MyWindowsService\\MyWindowsService.sln"
+           bat '${tool "msbuild"} "src\\MyWindowsService\\MyWindowsService.sln" /p:Configuration=Release /p:Platform=\"x86\"'
         }
       }
    }
