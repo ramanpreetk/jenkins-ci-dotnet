@@ -15,7 +15,7 @@ stage ('Checkout') {
 }
 stage ('Restore Packages') {     
          steps {
-             bat '"C:\\Program Files\\dotnet\\dotnet.exe" restore "D:\\DevOps Training\\DemoPipeline\\jenkins-ci-dotnet\\src\\MyWindowsService\\MyWindowsService.sln" ' 
+             bat '"C:\\Program Files\\dotnet\\dotnet.exe" restore "src\\MyWindowsService\\MyWindowsService.sln" ' 
           }
         }
 // stage('Clean') {
