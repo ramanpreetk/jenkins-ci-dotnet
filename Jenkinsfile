@@ -9,7 +9,7 @@ stages {
 stage ('Checkout') {
             steps {
                  withCredentials([usernamePassword(credentialsId: 'cicdpipeline', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                    checkout scm
+                    git "https://github.com/ramanpreetk/jenkins-ci-dotnet.git"
                  }
             }
 }
