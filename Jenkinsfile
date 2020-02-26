@@ -26,8 +26,7 @@ stage ('Restore Packages') {
 stage('Build') {
      steps {
         script{
-           def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
-           bat "${msbuild} src\\MyWindowsService\\MyWindowsService.sln"
+           bat "${tool 'msbuild'} src\\MyWindowsService\\MyWindowsService.sln"
         }
       }
    }
